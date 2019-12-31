@@ -1,6 +1,9 @@
-# Pack2Go_FrontEnd_Desktop
+# Pack2Go_VueJS_Desktop
 
 ## Project setup
+Clone the project locally and in a terminal run `npm i` inside the folder containing package.json, then `npm run serve`
+
+### Install dependencies
 ```
 npm install
 ```
