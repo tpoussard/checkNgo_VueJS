@@ -2,10 +2,10 @@
   <div>
     <div
       v-for="item in filteredItems"
-      :key="item.id"
+      :key="item"
       >
         <itemrow
-          :singleItem="item.name"
+          :singleItem="item"
           :itemsChecked="itemsChecked"
         ></itemrow>
     </div>
@@ -26,9 +26,11 @@ export default {
   computed: {
     filteredItems: function () {
       const singleCategory = this.singleCategory
-      return this.allItems.filter(function (item) {
-        return (item.category_name === singleCategory)
+      const testItems = this.allItems.filter(function (item) {
+         return (item.key === singleCategory)
+        // return (item.category_name === singleCategory)
       })
+      return testItems[0].data.map((obj) => obj.key)
     }
   }
 }
